@@ -14,6 +14,18 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image,
+  Sticky,
+  Modal,
+  ModalContent,
+  ModalOverlay,
+  ModalHeader,
+  FormControl,
+  ModalCloseButton,
+  ModalBody,
+  Input,
+  FormLabel,
+  ModalFooter,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -21,9 +33,15 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
+import logo from '../assets/images/ieeelogo.png'
+import React from 'react';
+
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const { isOpen1, onOpen1, onClose1 } = useDisclosure();
+  // const initialRef = React.useRef(null)
+  // const finalRef = React.useRef(null)
 
   return (
     <Box>
@@ -50,15 +68,16 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
+        <Flex align={'center'} flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          {/* <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
             Logo
-          </Text>
+          </Text> */}
+          <Image src={logo} w='50px'/>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex justify={'flex-end'} display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
@@ -73,21 +92,57 @@ export default function WithSubnavigation() {
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
-            href={'#'}>
-            Sign In
+            href={'#contact'}>
+            Contact Us
           </Button>
           <Button
+            onClick={onOpen1}
+            as={'a'}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
-            bg={'pink.400'}
-            href={'#'}
+            bg={'#0D74FF'}
+            href={'#subscribe'}
             _hover={{
-              bg: 'pink.300',
+              bg: 'blue.300',
             }}>
-            Sign Up
+            Subscribe
           </Button>
+
+          <Modal
+            // initialFocusRef={initialRef}
+            // finalFocusRef={finalRef}
+            isOpen={isOpen1}
+            onClose={onClose1}
+          >
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>Create your account</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody pb={6}>
+                <FormControl>
+                  <FormLabel>First name</FormLabel>
+                  <Input 
+                  // ref={initialRef} 
+                    placeholder='First name' />
+                </FormControl>
+
+                <FormControl mt={4}>
+                  <FormLabel>Last name</FormLabel>
+                  <Input placeholder='Last name' />
+                </FormControl>
+              </ModalBody>
+
+              <ModalFooter>
+                <Button colorScheme='blue' mr={3}>
+                  Save
+                </Button>
+                <Button onClick={onClose1}>Cancel</Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
+
         </Stack>
       </Flex>
 
@@ -153,12 +208,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('blue.50', 'gray.900') }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
+            _groupHover={{ color: 'blue.400' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -172,7 +227,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={'flex-end'}
           align={'center'}
           flex={1}>
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -251,41 +306,43 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
+    label: 'About',
+    href: '#about',
     children: [
       {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
+        label: 'Subdomains',
+        subLabel: 'Chapters and Affinity Groups',
+        href: '#domains',
       },
       {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
+        label: 'Achievements',
+        subLabel: 'New & Noteworthy',
+        href: '#achievements',
       },
     ],
   },
   {
-    label: 'Find Work',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: 'Events',
+    href: '#events',
+    // children: [
+    //   {
+    //     label: 'Job Board',
+    //     subLabel: 'Find your dream design job',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'Freelance Projects',
+    //     subLabel: 'An exclusive list for contract work',
+    //     href: '#',
+    //   },
+    // ],
   },
   {
-    label: 'Learn Design',
-    href: '#',
+    label: 'Team',
+    href: '#team',
   },
   {
-    label: 'Hire Designers',
-    href: '#',
+    label: 'Galleria',
+    href: '#galleria',
   },
 ];

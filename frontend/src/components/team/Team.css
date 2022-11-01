@@ -1,0 +1,32 @@
+.team{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 120px;
+    flex-wrap: wrap;
+
+
+}
+@media screen and (max-width:769px) {
+    .team_right{
+        margin-top: 30px;
+    }   
+}
+.image_profile{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.team_l_head{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #1b72f7;
+}
+.team_l_body{
+    font-size:18px;
+    width: 320px;
+    margin-top: 20px;
+}
+.team_left{
+    text-align: left;
+}

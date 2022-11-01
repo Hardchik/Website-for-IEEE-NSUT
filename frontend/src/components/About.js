@@ -67,7 +67,7 @@ import {
           gap={{ base: '8', sm: '12', md: '16' }}>
           <Feature
             heading={'First Feature'}
-            text={'Short text describing one of you features/service'}
+            text={'Computer Society (CS), is a technical and student chapter from IEEE, it dedicates itself to make progress on the areas related to computing, more information can be seen on Site CS.'}
           />
           <Feature
             heading={'Second Feature'}

@@ -10,11 +10,14 @@ import {
     Icon,
     useColorModeValue,
   } from '@chakra-ui/react';
-  import {
-    IoAnalyticsSharp,
-    IoLogoBitcoin,
-    IoSearchSharp,
-  } from 'react-icons/io5';
+  // import {
+  //   IoAnalyticsSharp,
+  //   IoLogoBitcoin,
+  //   IoSearchSharp,
+  // } from 'react-icons/io5';
+  import {RiComputerLine, RiWomenLine} from 'react-icons/ri'
+  import {GoCircuitBoard} from 'react-icons/go'
+  import {FaRobot} from 'react-icons/fa'
   import { ReactElement } from 'react';
   
   interface FeatureProps {
@@ -42,7 +45,7 @@ import {
   
   export default function SplitWithImage() {
     return (
-      <Container maxW={'5xl'} py={12}>
+      <Container maxW={'5xl'} py={12} id='domains'>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4}>
             <Text
@@ -54,12 +57,13 @@ import {
               p={2}
               alignSelf={'flex-start'}
               rounded={'md'}>
-              Our Story
+              Subdomains
             </Text>
-            <Heading>A digital Product design agency</Heading>
+            <Heading>Chapters and Affinity group</Heading>
             <Text color={'gray.500'} fontSize={'lg'}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore
+              Chapters and affinity groups are the key segments 
+              of IEEE architecture that provides customized opportunities 
+              to students
             </Text>
             <Stack
               spacing={4}
@@ -70,22 +74,29 @@ import {
               }>
               <Feature
                 icon={
-                  <Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />
+                  <Icon as={RiComputerLine} color={'orange.500'} w={5} h={5} />
                 }
-                iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                text={'Business Planning'}
+                iconBg={useColorModeValue('orange.100', 'orange.900')}
+                text={'CS Chapter'}
               />
               <Feature
-                icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
-                iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Financial Planning'}
+                icon={<Icon as={RiWomenLine} color={'purple.500'} w={5} h={5} />}
+                iconBg={useColorModeValue('purple.100', 'purple.900')}
+                text={'WIE Affinity Group'}
               />
               <Feature
                 icon={
-                  <Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />
+                  <Icon as={FaRobot} color={'red.500'} w={5} h={5} />
                 }
-                iconBg={useColorModeValue('purple.100', 'purple.900')}
-                text={'Market Analysis'}
+                iconBg={useColorModeValue('red.100', 'red.900')}
+                text={'RAS Chapter'}
+              />
+              <Feature
+                icon={
+                  <Icon as={GoCircuitBoard} color={'green.500'} w={5} h={5} />
+                }
+                iconBg={useColorModeValue('green.100', 'green.900')}
+                text={'CAS Chapter'}
               />
             </Stack>
           </Stack>

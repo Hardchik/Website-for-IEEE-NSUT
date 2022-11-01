@@ -8,47 +8,52 @@ import {
     Icon,
     IconProps,
   } from '@chakra-ui/react';
+  import Lottie from 'lottie-react'
+  import homeanime from '../assets/gifs/home.json'
   
   export default function CallToActionWithIllustration() {
     return (
-      <Container maxW={'5xl'}>
+      <Container maxW={'5xl'} id='home'>
         <Stack
           textAlign={'center'}
           align={'center'}
+          alignItems={'center'}
           spacing={{ base: 8, md: 10 }}
           py={{ base: 20, md: 28 }}>
           <Heading
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-            Meeting scheduling{' '}
-            <Text as={'span'} color={'orange.400'}>
-              made easy
+            The Official Website of{' '}
+            <Text as={'span'} color={'orange.400'} style={{fontWeight:'700'}}>
+              IEEE NSUT
             </Text>
           </Heading>
           <Text color={'gray.500'} maxW={'3xl'}>
-            Never miss a meeting. Never be late for one too. Keep track of your
-            meetings and receive smart reminders in appropriate times. Read your
-            smart “Daily Agenda” every morning.
+          IEEE NSUT is one of the most renowned student branches of the IEEE 
+          architecture due to its well-defined contributions and unique impacts.
           </Text>
           <Stack spacing={6} direction={'row'}>
             <Button
               rounded={'full'}
               px={6}
-              colorScheme={'orange'}
-              bg={'orange.400'}
-              _hover={{ bg: 'orange.500' }}>
-              Get started
-            </Button>
-            <Button rounded={'full'} px={6}>
+              colorScheme={'blue'}
+              bg={'blue.400'}
+              _hover={{ bg: 'blue.500' }}>
               Learn more
             </Button>
+            {/* <Button rounded={'full'} px={6}>
+              Learn more
+            </Button> */}
           </Stack>
           <Flex w={'full'}>
             <Illustration
               height={{ sm: '24rem', lg: '28rem' }}
               mt={{ base: 12, sm: 16 }}
             />
+            {/* <Stack justifyContent={'center'} textAlign={'center'} align={'center'}>
+              <Lottie animationData={homeanime} loop={true} className="home_anime" />
+            </Stack> */}
           </Flex>
         </Stack>
       </Container>
