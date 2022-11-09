@@ -1,0 +1,66 @@
+.portfolio{
+    text-align: left;
+    padding-top: 60px;
+    margin: 30px;
+
+}
+@media screen and (max-width:830px) {
+}
+@media screen and (min-width:830px) {
+    .leftmargin{
+        margin-left: 85px;
+    }
+}
+
+.heads_port{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
+.portfolio_a{
+    font-size: 40px;
+    color: 
+#1b72f7;
+font-weight: bolder;
+}
+.grid_ele{
+    width: 370px;
+    border-radius: 12px;
+    margin: 25px;
+
+}
+@media screen and (max-width:830px) {
+    .port_grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+}
+@media screen and (min-width:830px) {
+    .port_grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+}
+
+
+.port_btn{
+    background: #617BFF;
+border-radius: 12px;
+width: 120px;
+padding: 10px;
+text-align: center;
+color: white;
+font-weight: bolder;
+margin: auto;
+font-family: 'Poppins', sans-serif;
+
+}

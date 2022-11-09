@@ -18,7 +18,8 @@ import Team from './components/team/Team';
 import About from './components/about/About';
 import Contact from './components/Contact' //contactUs
 import Card from './components/cards/displayCard'
-import Awards from './components/awards/Awards';
+// import Awards from './components/awards/Awards';
+import Achievements from './components/achievements/Achievements'
 import Portfolio from './components/portfolio/Portfolio';
 import Faculty from './components/Faculty';
 
@@ -38,7 +39,8 @@ function App() {
       {/* <BasicStatistics /> */}
       {/* <GridListWithHeading /> */}
       <Faculty />
-      <Awards />
+      {/* <Awards /> */}
+      <Achievements />
       <Team />
       <Portfolio/>
       <Events />
