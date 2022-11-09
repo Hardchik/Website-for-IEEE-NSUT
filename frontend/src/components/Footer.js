@@ -9,7 +9,7 @@ import {
   VisuallyHidden,
   Image
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { ReactNode } from 'react';
 import logo from '../assets/images/ieeelogo.png'
 
@@ -102,13 +102,13 @@ export default function SmallCentered() {
           color='white'>
           <Text>© 2022 IEEE NSUT. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
+            <SocialButton label={'Twitter'} href={'https://twitter.com/IeeeNsut'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
+            <SocialButton label={'YouTube'} href={'https://www.linkedin.com/company/ieee-nsut/'}>
+              <FaLinkedin />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
+            <SocialButton label={'Instagram'} href={'https://www.instagram.com/ieee_nsut/'}>
               <FaInstagram />
             </SocialButton>
           </Stack>

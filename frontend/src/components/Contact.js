@@ -55,7 +55,7 @@ import {
                           color="#a9a9a9"
                           _hover={{ border: '2px solid #a9a9a9' }}
                           leftIcon={<MdPhone color="#777" size="20px" />}>
-                          +91-988888888
+                          +91-9534781286
                         </Button>
                         <Button
                           size="md"
@@ -65,7 +65,7 @@ import {
                           color="#a9a9a9"
                           _hover={{ border: '2px solid #a9a9a9' }}
                           leftIcon={<MdEmail color="#777" size="20px" />}>
-                          hello@abc.com
+                          ieeensut@gmail.com
                         </Button>
                         <Button
                           size="md"
@@ -75,7 +75,7 @@ import {
                           color="#a9a9a9"
                           _hover={{ border: '2px solid #a9a9a9' }}
                           leftIcon={<MdLocationOn color="#777" size="20px" />}>
-                          Karnavati, India
+                          NSUT, Delhi
                         </Button>
                       </VStack>
                     </Box>

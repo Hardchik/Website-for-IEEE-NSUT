@@ -1,6 +1,8 @@
 import WithSubnavigation from './components/NavBar' //Header
 import LargeWithNewsletter from './components/Footer' //Footer
 
+import './App.css'
+
 import CallToActionWithIllustration from './components/Hero' // Hero Section
 
 import SplitWithImage from './components/Services' //Services provided by us
@@ -24,7 +26,7 @@ import Events from './components/events/events'
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <WithSubnavigation />
       <CallToActionWithIllustration />
       <Carousel/>

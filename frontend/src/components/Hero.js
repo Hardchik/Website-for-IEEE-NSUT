@@ -34,14 +34,16 @@ import {
           architecture due to its well-defined contributions and unique impacts.
           </Text>
           <Stack spacing={6} direction={'row'}>
-            <Button
+            {/* <Button
+              // is={'a'}
+              href={"#about"}
               rounded={'full'}
               px={6}
               colorScheme={'blue'}
               bg={'blue.400'}
               _hover={{ bg: 'blue.500' }}>
               Learn more
-            </Button>
+            </Button> */}
             {/* <Button rounded={'full'} px={6}>
               Learn more
             </Button> */}
