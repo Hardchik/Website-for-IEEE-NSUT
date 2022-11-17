@@ -9,7 +9,7 @@
     justify-content: space-around;
     gap: 10px;
   }
-  .container {
+  .wrapper .container {
     width: 28vmin;
     height: 28vmin;
     display: flex;

@@ -37,7 +37,7 @@ export default function Events() {
             <div class="events" id="events">
             <div class="dots dots-up"></div>
             <div class="dots dots-down"></div>
-            <h2 class="main-title">Latest Events</h2>
+            <h2 style={{color:'#1B72F7', fontSize:'3rem', fontWeight:'800', textAlign:'center'}}>Latest Events</h2>
                 <div class="events_container">
                     <img src={eventsIMG} alt="" />
                     <div class="info">

@@ -24,6 +24,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Faculty from './components/Faculty';
 
 import Events from './components/events/events'
+import SponsorList from './components/sponsors/SponsorsList'
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
       <Team />
       <Portfolio/>
       <Events />
+      <SponsorList />
       <Contact />
       <LargeWithNewsletter />
 
