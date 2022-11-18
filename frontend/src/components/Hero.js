@@ -24,7 +24,7 @@ import {
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-            The Official Website of{' '}
+            {/* The Official Website of{' '} */}
             <Text as={'span'} color={'orange.400'} style={{fontWeight:'700'}}>
               IEEE NSUT
             </Text>
